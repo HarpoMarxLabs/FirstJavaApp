@@ -24,3 +24,11 @@ jar {
 apply plugin: 'application'
 
 mainClassName = 'com.tvc.chico.Main'
+
+sourceSets {
+    main {
+        resources {
+            srcDirs "src/main/resources", "src/main/configs"
+        }
+    }
+}

@@ -5,6 +5,8 @@ import com.tvc.chico.Main;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.InputStream;
+import java.net.URL;
 
 public class AppWindow implements ActionListener, ItemListener {
     private JTextArea output;
@@ -39,7 +41,11 @@ public class AppWindow implements ActionListener, ItemListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
 
-        ImageIcon icon = createImageIcon("images/middle.gif");
+        // this.getClass().getResource("/checkstyle_whitespace.xml")
+        // ImageIcon icon = createImageIcon("images/middle.gif");
+        InputStream img_res = getClass().getResourceAsStream("/middle.gif");
+        img_res.get
+        ImageIcon icon = createImageIcon(this.getClass().getResource("/middle.gif"));
         menuItem = new JMenuItem("Both text and icon", icon);
         menuItem.setMnemonic(KeyEvent.VK_B);
         menuItem.addActionListener(this);
