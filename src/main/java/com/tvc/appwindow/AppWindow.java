@@ -44,7 +44,8 @@ public class AppWindow implements ActionListener, ItemListener {
         // this.getClass().getResource("/checkstyle_whitespace.xml")
         // ImageIcon icon = createImageIcon("images/middle.gif");
         InputStream img_res = getClass().getResourceAsStream("/middle.gif");
-        img_res.get
+        URL resource = YourClass.class.getResource("abc");
+        Paths.get(resource.toURI()).toFile();
         ImageIcon icon = createImageIcon(this.getClass().getResource("/middle.gif"));
         menuItem = new JMenuItem("Both text and icon", icon);
         menuItem.setMnemonic(KeyEvent.VK_B);
