@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.InputStream;
 import java.net.URL;
+import java.nio.file.Paths;
 
 public class AppWindow implements ActionListener, ItemListener {
     private JTextArea output;
@@ -43,10 +44,11 @@ public class AppWindow implements ActionListener, ItemListener {
 
         // this.getClass().getResource("/checkstyle_whitespace.xml")
         // ImageIcon icon = createImageIcon("images/middle.gif");
-        InputStream img_res = getClass().getResourceAsStream("/middle.gif");
-        URL resource = YourClass.class.getResource("abc");
-        Paths.get(resource.toURI()).toFile();
-        ImageIcon icon = createImageIcon(this.getClass().getResource("/middle.gif"));
+        //InputStream img_res = getClass().getResourceAsStream("/middle.gif");
+        // URL resource = this.getClass().getResource("/middle.gif");
+        // System.out.println(resource.getFile().toString());
+
+        ImageIcon icon = createImageIcon("/images/middle.gif");
         menuItem = new JMenuItem("Both text and icon", icon);
         menuItem.setMnemonic(KeyEvent.VK_B);
         menuItem.addActionListener(this);
